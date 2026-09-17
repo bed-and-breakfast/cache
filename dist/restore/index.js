@@ -95076,5 +95076,8 @@ async function restoreRun(earlyExit) {
 
 ;// CONCATENATED MODULE: ./src/restore.ts
 
+if (process.env.ACTIONS_CACHE_URL) {
+    process.env.ACTIONS_RESULTS_URL = process.env.ACTIONS_CACHE_URL;
+}
 restoreRun(true);
 
