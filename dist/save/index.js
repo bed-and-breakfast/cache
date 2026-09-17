@@ -95100,8 +95100,8 @@ async function saveRun(earlyExit) {
 
 ;// CONCATENATED MODULE: ./src/save.ts
 
-if (process.env.ACTIONS_CACHE_URL) {
-    process.env.ACTIONS_RESULTS_URL = process.env.ACTIONS_CACHE_URL;
+if (process.env.GHA_SELF_HOSTED_CACHE_URL) {
+    process.env.ACTIONS_RESULTS_URL = process.env.GHA_SELF_HOSTED_CACHE_URL;
 }
 saveRun(true);
 
